@@ -30,7 +30,7 @@ class HeaderComponent extends React.Component {
               <Link to="/home">STORY</Link>
             </li>
             <li className={styles['menu-link']} onClick={() => this.openMenu()}>
-              <Link to="/home">TRAVEL</Link>
+              <Link to="/travel">TRAVEL</Link>
             </li>
           </ul>
         </div>
