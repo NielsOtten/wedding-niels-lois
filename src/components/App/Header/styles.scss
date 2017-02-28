@@ -1,0 +1,104 @@
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: block;
+}
+
+.main-menu {
+  background-color: #ffffff;
+  height: 100%;
+  width: 0;
+  top: 0;
+  right: 0;
+  text-align: right;
+  position: fixed;
+  -webkit-transition: width .3s;
+  -moz-transition: width .3s;
+  -ms-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
+  padding-top: 120px;
+
+  &.active {
+    width: 100%;
+  }
+
+  .menu-link {
+    font-size: 30px;
+    height: 60px;
+    padding-right: 30px;
+  }
+
+  .menu-link > a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .menu-link > a:hover {
+    color: #000;
+  }
+
+  .menu-link > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .menu-link > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.nav-trigger {
+  cursor: pointer;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  padding-right: 40px;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  top: 24px;
+  width: 77px;
+  z-index: 10000;
+  transition: color .3s,top .3s;
+  box-sizing: border-box;
+
+  span {
+    top: 6px;
+  }
+
+  span, span:before, span:after {
+    background: black;
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    width: 20px;
+    content: "";
+  }
+
+  span:before {
+    bottom: -6px;
+  }
+
+  span:after {
+    top: -6px;
+  }
+}
+
