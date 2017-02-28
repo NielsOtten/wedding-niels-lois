@@ -81,7 +81,7 @@ header {
   box-sizing: border-box;
 
   &.active {
-    color: #000000;
+    color: transparent;
     span {
       background: none;
     }
