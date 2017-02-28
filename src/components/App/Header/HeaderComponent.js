@@ -14,9 +14,6 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <header>
-        <div className="title">
-          Loïs & Niels
-        </div>
         <div className={styles['nav-trigger']} onClick={() => this.openMenu()}>
           Menu
           <span/>
