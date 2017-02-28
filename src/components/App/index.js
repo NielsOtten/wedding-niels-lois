@@ -37,7 +37,7 @@ class App extends React.Component {
     }, 5000);
   }
 
-  render(children) {
+  render() {
     return (
       <div style={{height: 100+'vh'}}>
         <HeaderComponent />
@@ -54,7 +54,7 @@ class App extends React.Component {
               August 17, 2017
             </div>
           </div>
-          {children}
+          {this.props.children}
         </div>
       </div>
     );
@@ -72,5 +72,8 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  children: PropTypes.node,
+};
 
 export default App;
