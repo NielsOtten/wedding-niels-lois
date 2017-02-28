@@ -65,6 +65,7 @@ header {
 }
 
 .nav-trigger {
+  color: #ffffff;
   cursor: pointer;
   font-size: 14px;
   height: 14px;
@@ -79,12 +80,32 @@ header {
   transition: color .3s,top .3s;
   box-sizing: border-box;
 
+  &.active {
+    color: #000000;
+    span {
+      background: none;
+    }
+    span:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    span:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    span:before, span:after {
+      background: #000000;
+      transition-delay: 0s,.3s;
+      transition: all ease-in-out 0.3s
+    }
+  }
+
   span {
     top: 6px;
   }
 
   span, span:before, span:after {
-    background: black;
+    background: #ffffff;
     display: block;
     height: 2px;
     position: absolute;

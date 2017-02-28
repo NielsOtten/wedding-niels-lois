@@ -14,22 +14,22 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <header>
-        <div className={styles['nav-trigger']} onClick={() => this.openMenu()}>
+        <div className={styles['nav-trigger'] + ' ' + (this.state.open ? styles['active'] : '')} onClick={() => this.openMenu()}>
           Menu
           <span/>
         </div>
         <div className={styles['main-menu'] + ' ' + (this.state.open ? styles['active'] : '')}>
           <ul>
-            <li className={styles['menu-link']}>
+            <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/home">HOME</Link>
             </li>
-            <li className={styles['menu-link']}>
+            <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/rsvp">RSVP</Link>
             </li>
-            <li className={styles['menu-link']}>
+            <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/home">STORY</Link>
             </li>
-            <li className={styles['menu-link']}>
+            <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/home">TRAVEL</Link>
             </li>
           </ul>

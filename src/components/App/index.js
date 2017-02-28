@@ -44,6 +44,16 @@ class App extends React.Component {
         <div className={styles.content}>
           <div className={styles['mobile-image']} style={{backgroundImage: 'url(' + this.state.mobileImage + ')'}}></div>
           <div className={styles['desktop-image']} style={{backgroundImage: 'url(' + this.state.desktopImage + ')'}}></div>
+          <div className={styles['center-text']}>
+            <div className={styles['text']}>
+              The Future
+              <br/>
+              Mr & Mrs Otten
+            </div>
+            <div className={styles['sub-text']}>
+              August 17, 2017
+            </div>
+          </div>
           {children}
         </div>
       </div>
