@@ -67,14 +67,14 @@ header {
 .nav-trigger {
   color: #ffffff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   height: 14px;
   line-height: 14px;
-  padding-right: 40px;
+  padding-right: 85px;
   position: absolute;
-  right: 30px;
   text-transform: uppercase;
-  top: 24px;
+  top: 40px;
+  right: 40px;
   width: 77px;
   z-index: 10000;
   transition: color .3s,top .3s;
@@ -101,7 +101,7 @@ header {
   }
 
   span {
-    top: 6px;
+    top: 5px;
   }
 
   span, span:before, span:after {
