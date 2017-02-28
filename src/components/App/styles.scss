@@ -1,36 +1,50 @@
-
 @import '../../shared-styles/variables';
 
-.header {
-  text-align: center;
-}
-
-.nav {
-  width: $content-width;
-  margin: 0 auto;
-  padding: $padding;
-  text-align: center;
-}
-
 .content {
-  width: $content-width;
-  margin: $padding auto;
+  width: 100%;
+  height: 100%;
 }
 
-.navItem {
-  display: inline-block;
+.desktop-image {
+  height: 100vh;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 1s ease-in;
+  -moz-transition: background-image 1s ease-in;
+  -webkit-transition: background-image 1s ease-in;
 }
 
-.link {
-  padding: $padding;
-  color: #00a68f;
-  font-size: 18px;
+.mobile-image {
+  height: 100vh;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 1s ease-in;
+  -moz-transition: background-image 1s ease-in;
+  -webkit-transition: background-image 1s ease-in;
 }
 
-.logo {
-  display: block;
-  width: 252px;
-  height: 252px;
-  margin: $padding auto;
-  background: url('../../images/icon-kytLogo_large-252x252.svg');
+/* Portrait and Landscape */
+@media only screen
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+}
+
+@media only screen
+and (min-device-width: 480px) {
+  .desktop-image {
+    display: block;
+  }
+
+  .mobile-image {
+    display: none;
+  }
 }
