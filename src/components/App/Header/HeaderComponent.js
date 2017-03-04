@@ -7,14 +7,36 @@ class HeaderComponent extends React.Component {
     super(props);
 
     this.state = {
-      open: false
+      open: false,
+      menuBlack: false
     };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    const scrollHeight = window.scrollY;
+
+    console.log(scrollHeight > windowHeight - 100);
+
+    if (scrollHeight > windowHeight - 100) {
+      this.setState({menuBlack: true});
+    } else {
+      this.setState({menuBlack: false});
+    }
   }
 
   render() {
     return (
       <header>
-        <div className={styles['nav-trigger'] + ' ' + (this.state.open ? styles['active'] : '')} onClick={() => this.openMenu()}>
+        <div className={styles['nav-trigger'] + ' ' + (this.state.open ? styles['active'] : '') + ' ' + (this.state.menuBlack ? styles['menu-black'] : '')} onClick={() => this.openMenu()} >
           Menu
           <span/>
         </div>

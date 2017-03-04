@@ -120,6 +120,14 @@ header {
     }
   }
 
+  &.menu-black:not(.active) {
+    color: #000000;
+
+    span, span:before, span:after {
+      background: #000000;
+    }
+  }
+
   span {
     top: 5px;
   }
