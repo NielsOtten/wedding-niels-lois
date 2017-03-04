@@ -115,8 +115,6 @@ header {
     }
     span:before, span:after {
       background: #000000;
-      transition-delay: 0s,.3s;
-      transition: all ease-in-out 0.3s
     }
   }
 
@@ -140,6 +138,9 @@ header {
     right: 0;
     width: 20px;
     content: "";
+    transform: rotate(0);
+    transition-delay: 0s,.3s;
+    transition: all ease-in-out 0.3s
   }
 
   span:before {
