@@ -10,27 +10,30 @@ header {
 .main-menu {
   background-color: #ffffff;
   height: 100%;
-  width: 0;
+  width: 300px;
   top: 0;
   right: 0;
   text-align: right;
   position: fixed;
-  -webkit-transition: width .3s;
-  -moz-transition: width .3s;
-  -ms-transition: width .3s;
-  -o-transition: width .3s;
-  transition: width .3s;
-  padding-top: 120px;
+  transition: transform .3s;
+  transform: translateX(100%);
+
+  ul {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
 
   &.active {
-    width: 300px;
+    transform: translateX(0);
   }
 
   @media only screen
   and (max-width: 480px) {
-    &.active {
       width: 100%;
-    }
   }
 
   .menu-link {
