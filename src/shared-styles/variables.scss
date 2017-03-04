@@ -1,11 +1,11 @@
 $content-width: 500px;
 $padding: 15px;
-$defaultFont: 'Raleway',sans-serif;
+$defaultFont: 'Roboto', Fallback, sans-serif;
 
 .colomn {
   max-width: 1200px;
   padding: 0 5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: $defaultFont;
 
   .col-6 {
     width: 50%;

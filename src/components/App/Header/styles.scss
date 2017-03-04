@@ -1,3 +1,6 @@
+
+@import '../../../shared-styles/variables';
+
 header {
   background-color: white;
   position: fixed;
@@ -46,6 +49,7 @@ header {
     position: relative;
     color: #000;
     text-decoration: none;
+    font-family: $defaultFont;
   }
 
   .menu-link > a:hover {
@@ -89,6 +93,7 @@ header {
   z-index: 10000;
   transition: color .3s,top .3s;
   box-sizing: border-box;
+  font-family: $defaultFont;
 
   &.active {
     color: transparent;
