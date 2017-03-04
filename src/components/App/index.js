@@ -24,7 +24,7 @@ class App extends React.Component {
       });
 
       this.image++;
-      if (this.image >= 13) {
+      if (this.image >= 12) {
         this.image = 1;
       }
 
