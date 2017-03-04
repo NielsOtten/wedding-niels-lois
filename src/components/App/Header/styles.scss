@@ -18,7 +18,7 @@ header {
   right: 0;
   text-align: right;
   position: fixed;
-  transition: transform .3s;
+  transition: transform .3s, box-shadow .3s;
   transform: translateX(100%);
 
   ul {
