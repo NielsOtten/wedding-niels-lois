@@ -20,6 +20,7 @@ header {
   position: fixed;
   transition: transform .3s, box-shadow .3s;
   transform: translateX(100%);
+  user-select: none;
 
   ul {
     transform: translateY(-50%);
@@ -97,6 +98,7 @@ header {
   transition: color .3s,top .3s;
   box-sizing: border-box;
   font-family: $defaultFont;
+  user-select: none;
 
   &.active {
     color: transparent;
