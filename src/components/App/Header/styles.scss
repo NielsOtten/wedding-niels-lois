@@ -32,6 +32,9 @@ header {
 
   &.active {
     transform: translateX(0);
+    -webkit-box-shadow: 0 0 15px 1px rgba(0,0,0,.11);
+    -moz-box-shadow: 0 0 15px 1px rgba(0,0,0,.11);
+    box-shadow: 0 0 15px 1px rgba(0,0,0,.11);
   }
 
   @media only screen
