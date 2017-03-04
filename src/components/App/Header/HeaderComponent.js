@@ -24,8 +24,6 @@ class HeaderComponent extends React.Component {
     const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     const scrollHeight = window.scrollY;
 
-    console.log(scrollHeight > windowHeight - 100);
-
     if (scrollHeight > windowHeight - 100) {
       this.setState({menuBlack: true});
     } else {
