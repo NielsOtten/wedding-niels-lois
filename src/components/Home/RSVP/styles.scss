@@ -1,0 +1,23 @@
+.button {
+  padding: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #000000;
+  margin: 10px auto;
+  display: block;
+
+  @media only screen and (max-width: 480px) {
+    display: block;
+  }
+}
+
+.form {
+  top: 50%;
+  position: relative;
+  max-width: 400px;
+  background: #fff;
+  height: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
