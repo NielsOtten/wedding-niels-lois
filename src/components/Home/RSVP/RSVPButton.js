@@ -26,6 +26,23 @@ class RSVPButton extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    const conf = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    };
+
+    fetch('/addRSVP', conf)
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
+      });
   }
 
   render() {

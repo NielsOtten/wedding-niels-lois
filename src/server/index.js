@@ -9,9 +9,17 @@ import createMemoryHistory from 'react-router/lib/createMemoryHistory';
 import match from 'react-router/lib/match';
 import template from './template';
 import routes from '../routes';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import Guest from './Guest';
 
 const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
 const app = express();
+
+const mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/trouwen';
+
+mongoose.Promise = Promise;
+mongoose.connect(mongoURL);
 
 // Remove annoying Express header addition.
 app.disable('x-powered-by');
@@ -19,12 +27,23 @@ app.disable('x-powered-by');
 // Compress (gzip) assets in production.
 app.use(compression());
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
 // Setup the public directory so that we can server static assets.
 app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
 
 app.post('/addRSVP', (request, response) => {
-  console.log(request);
-  response.end();
+  response.setHeader('Content-Type', 'application/json');
+
+  const guest = new Guest(request.body);
+  guest.save()
+    .then(a => response.json({
+      "succes": "true"
+    }))
+    .catch(e => response.json(e));
 });
 
 // Setup server side routing.
