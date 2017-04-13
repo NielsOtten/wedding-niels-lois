@@ -6,7 +6,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 8;
   display: block;
 }
 
@@ -94,7 +94,7 @@ header {
   top: 40px;
   right: 30px;
   width: 77px;
-  z-index: 10000;
+  z-index: 8;
   transition: color .3s,top .3s;
   box-sizing: border-box;
   font-family: $defaultFont;

@@ -51,13 +51,16 @@ class RSVPButton extends React.Component {
         <a href="#" className={styles['button']} onClick={e => this.prevent(e)}>
           Meld je aan!
         </a>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Emailadres:</label>
-          <input type="email" id="email" name="email" onChange={this.handleChange}/>
-          <label htmlFor="total">Totaal gasten:</label>
-          <input type="number" id="total" name="total" onChange={this.handleChange}/>
-          <input type="submit" value="submit"/>
-        </form>
+        <div className={styles['form']}>
+          <h2>Meld je aan voor de trouwerij</h2>
+          <p>We gebruiken alleen je email om een Welkoms mail te sturen en de uitnodiging.</p>
+          <form onSubmit={this.handleSubmit}>
+            <input type="email" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
+            <input type="number" id="total" name="total" placeholder="Total" onChange={this.handleChange}/>
+            <input className={styles['submit']} type="submit" value="Submit"/>
+          </form>
+        </div>
+        <div className={styles['modal']}></div>
       </div>
     );
   }
