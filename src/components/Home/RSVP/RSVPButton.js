@@ -6,6 +6,7 @@ class RSVPButton extends React.Component {
     super();
 
     this.state = {
+      open: false,
       email: '',
       total: 0
     };
@@ -45,13 +46,29 @@ class RSVPButton extends React.Component {
       });
   }
 
+  handleOpen() {
+    if (this.state.open) {
+      this.setState({
+        open: false
+      });
+      return;
+    }
+    this.setState({
+      open: true
+    });
+  }
+
   render() {
+    const open = this.state.open ? {
+      display: 'block'
+    } : {};
+
     return (
       <div>
-        <a href="#" className={styles['button']} onClick={e => this.prevent(e)}>
+        <a href="#" className={styles['button']} onClick={e => this.handleOpen()}>
           Meld je aan!
         </a>
-        <div className={styles['form']}>
+        <div className={styles['form']} style={open}>
           <h2>Meld je aan voor de trouwerij</h2>
           <p>We gebruiken alleen je email om een Welkoms mail te sturen en de uitnodiging.</p>
           <form onSubmit={this.handleSubmit}>
@@ -60,19 +77,10 @@ class RSVPButton extends React.Component {
             <input className={styles['submit']} type="submit" value="Submit"/>
           </form>
         </div>
-        <div className={styles['modal']}></div>
+        <div className={styles['modal']} style={open} onClick={e => this.handleOpen()}></div>
       </div>
     );
   }
-
-  prevent(e) {
-    e.preventDefault();
-  }
-
-  onSubmit(e) {
-    e.preventDefault();
-  }
-
 }
 
 export default RSVPButton;
