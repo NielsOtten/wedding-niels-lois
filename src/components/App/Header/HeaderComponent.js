@@ -44,7 +44,7 @@ class HeaderComponent extends React.Component {
               <Link to="/">Home</Link>
             </li>
             <li className={styles['menu-link']} onClick={() => this.openMenu()}>
-              <Link to="/rsvp">RSVP</Link>
+              <Link to="/music">Guilty pleasure</Link>
             </li>
             <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/home">Story</Link>
