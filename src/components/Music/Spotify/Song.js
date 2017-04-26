@@ -8,6 +8,12 @@ class Song extends React.Component {
     this.handleClick = this.handleClickOnSong.bind(this);
   }
 
+  componentWillUnmount() {
+    if (this.audioObject) {
+      this.audioObject.pause();
+    }
+  }
+
   handleClickOnSong() {
     if (this.playing) {
       this.playing = false;
@@ -32,7 +38,7 @@ class Song extends React.Component {
   render() {
     return (
       <li className={styles['song']} onClick={this.handleClick}>
-        test
+        {this.props.title}
       </li>
     );
   }
