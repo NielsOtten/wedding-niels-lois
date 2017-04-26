@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import styles from './styles.scss';
 
-function Song() {
-  return (
-    <div className={styles['song']}>
-    </div>
-  );
+class Song extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClickOnSong.bind(this);
+  }
+
+  handleClickOnSong() {
+    if (this.playing) {
+      this.playing = false;
+      this.audioObject.pause();
+    } else {
+      this.fetchTracks(this.props.id)
+        .then(data => {
+          this.audioObject = new Audio(data.tracks.items[0].preview_url);
+          this.playing = true;
+          this.audioObject.play();
+        });
+    }
+  }
+
+  fetchTracks(albumId) {
+    return fetch('https://api.spotify.com/v1/albums/' + albumId)
+      .then(response => {
+        return response.json();
+      });
+  }
+
+  render() {
+    return (
+      <li className={styles['song']} onClick={this.handleClick}>
+        test
+      </li>
+    );
+  }
 }
 
-export default Spotify;
+Song.propTypes = {
+  id: PropTypes.string
+};
+
+export default Song;

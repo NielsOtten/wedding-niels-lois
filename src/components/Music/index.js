@@ -11,6 +11,7 @@ import Spotify from './Spotify/Spotify';
 function Music() {
   return (
     <section className={styles['spotify']}>
+      <div className={styles['image']}/>
       <Spotify/>
     </section>
   );

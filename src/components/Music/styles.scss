@@ -4,3 +4,17 @@
   height: 100vh;
   position: relative;
 }
+
+.image {
+  background: url("../../images/Desktop_image_13.jpg") 50% center / cover no-repeat;
+  float: left;
+  height: 100%;
+  width: 50%;
+  position: relative;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    float: none;
+    height: 50%;
+  }
+}

@@ -5,12 +5,19 @@
 }
 
 .container {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  background: red;
-  width: 100%;
-  max-width: 400px;
-  height: 200px;
+  float: left;
+  height: 100%;
+  width: 50%;
+  position: relative;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    float: none;
+    height: 50%;
+  }
+
+  .spotify {
+    width: 80%;
+    margin: 0 auto;
+  }
 }

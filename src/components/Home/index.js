@@ -8,18 +8,6 @@ class Home extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.translate);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.translate);
-  }
-
-  translate() {
-
-  }
-
   render() {
     const text = 'Wij hebben onze liefde & geluk in elkaar gevonden en zijn daarom klaar om samen deze wereld te ' +
       'ontdekken. Voordat we dit avontuur beginnen willen wij elkaar trouw beloven en delen wij dus met heel veel ' +
