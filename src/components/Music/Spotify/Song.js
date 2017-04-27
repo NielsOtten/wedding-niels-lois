@@ -5,7 +5,12 @@ class Song extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      playing: false
+    };
+
     this.handleClick = this.handleClickOnSong.bind(this);
+    this.addClick = this.handleAddClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -15,17 +20,26 @@ class Song extends React.Component {
   }
 
   handleClickOnSong() {
-    if (this.playing) {
-      this.playing = false;
+    if (this.state.playing) {
+      this.setState({
+        playing: false
+      });
       this.audioObject.pause();
     } else {
       this.fetchTracks(this.props.id)
         .then(data => {
           this.audioObject = new Audio(data.tracks.items[0].preview_url);
-          this.playing = true;
+          this.setState({
+            playing: true
+          });
           this.audioObject.play();
         });
     }
+  }
+
+  handleAddClick(e) {
+    e.preventDefault();
+    console.log('test');
   }
 
   fetchTracks(albumId) {
@@ -36,16 +50,33 @@ class Song extends React.Component {
   }
 
   render() {
+    let style = {};
+    if (this.state.playing) {
+      style = {
+        display: 'block'
+      }
+    }
+
     return (
-      <li className={styles['song']} onClick={this.handleClick}>
-        {this.props.title}
+      <li className={styles['song']}>
+        <div className={styles['images']} onClick={this.handleClick}>
+          <img src={this.props.image} alt={this.props.title}/>
+          <img style={style} className={styles['playing']} src={require('../../../images/Pause.png')} alt="Pause"/>
+        </div>
+        <div className={styles['info']}>
+          <h3>{this.props.title}</h3>
+        </div>
+        <div className={styles['actions']}>
+          <button className={styles['add']} onClick={this.addClick}/>
+        </div>
       </li>
     );
   }
 }
 
 Song.propTypes = {
-  id: PropTypes.string
+  id: PropTypes.string,
+  image: PropTypes.string
 };
 
 export default Song;

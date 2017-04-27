@@ -30,7 +30,12 @@ class Spotify extends React.Component {
       .then(response => {
         this.setState({
           songs: response.albums.items.map(album => {
-            return <Song key={album.id} id={album.id} title={album.name}/>
+            console.log(album);
+            return <Song
+              key={album.id}
+              id={album.id}
+              title={album.name}
+              image={album.images[1].url}/>
           })
         });
       })}, WAIT_INTERVAL);
@@ -47,8 +52,13 @@ class Spotify extends React.Component {
     return(
       <div className={styles['container']}>
         <div className={styles['spotify']}>
-          <input type="text" name="music" onChange={this.handleChange}/>
-          <ul className="songs">
+          <div className={styles['input-container']}>
+            <div className={styles['input-wrapper']}>
+              <h2>Guilty pleasure list</h2>
+              <input className={styles['input']} type="text" name="music" onChange={this.handleChange}/>
+            </div>
+          </div>
+          <ul className={styles['songs']}>
             {this.state.songs}
           </ul>
         </div>
