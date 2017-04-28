@@ -54,7 +54,6 @@ class Spotify extends React.Component {
         <div className={styles['spotify']}>
           <div className={styles['input-container']}>
             <div className={styles['input-wrapper']}>
-              <h2>Guilty pleasure list</h2>
               <input className={styles['input']} type="text" name="music" onChange={this.handleChange}/>
             </div>
           </div>

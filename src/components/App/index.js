@@ -37,13 +37,27 @@ class App extends React.Component {
     }, 5000);
   }
 
+  componentWillMount() {
+    const transition = this.props.children.props.route.transition;
+    console.log(transition);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const transition = nextProps.children.props.route.transition;
+    console.log(transition);
+  }
+
+  transitionHeader() {
+
+  }
+
   render() {
     return (
       <div style={{height: 100+'vh'}}>
         <HeaderComponent />
         <div className={styles.content}>
-          <div className={styles['mobile-image']} style={{backgroundImage: 'url(' + this.state.mobileImage + ')'}}></div>
-          <div className={styles['desktop-image']} style={{backgroundImage: 'url(' + this.state.desktopImage + ')'}}></div>
+          <div className={styles['mobile-image']} style={{backgroundImage: 'url(' + this.state.mobileImage + ')'}}/>
+          <div className={styles['desktop-image']} style={{backgroundImage: 'url(' + this.state.desktopImage + ')'}}/>
           <div className={styles['center-text']}>
             <div className={styles['text']}>
               The Future
