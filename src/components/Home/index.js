@@ -16,10 +16,12 @@ class Home extends React.Component {
       ' website zullen we t.z.t. meer informatie plaatsen voor onze grote dag.';
 
     return (
-      <section className={styles['container']}>
-        <Colomn type='invite' position='1' text={text}/>
-        <Colomn type='image' position='1' image={require('../../images/Desktop_image_1.jpg')}/>
-      </section>
+      <div>
+        <section className={styles['container']}>
+          <Colomn type='invite' position='1' text={text}/>
+          <Colomn type='image' position='1' image={require('../../images/Desktop_image_1.jpg')}/>
+        </section>
+      </div>
     );
   }
 }

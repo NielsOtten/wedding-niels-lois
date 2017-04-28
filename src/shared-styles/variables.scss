@@ -39,6 +39,12 @@ $primaryFontColor: #212121;
   }
 }
 
+.container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
