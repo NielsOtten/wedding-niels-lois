@@ -50,7 +50,7 @@ class Spotify extends React.Component {
 
   render() {
     return(
-      <div className={styles['container']}>
+      <div className={styles['container-spotify']}>
         <div className={styles['spotify']}>
           <div className={styles['input-container']}>
             <div className={styles['input-wrapper']}>

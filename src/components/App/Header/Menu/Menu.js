@@ -21,7 +21,8 @@ class Menu extends React.Component {
   }
 
   handleScroll() {
-    const windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    let windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    windowHeight *= this.props.transition ? 0.70 : 1;
     const scrollHeight = window.scrollY;
 
     if (scrollHeight > windowHeight - 100) {
@@ -66,5 +67,9 @@ class Menu extends React.Component {
     }
   }
 }
+
+Menu.propTypes = {
+  transition: PropTypes.bool
+};
 
 export default Menu;
