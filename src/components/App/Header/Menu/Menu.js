@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import styles from './styles.scss';
 
-class HeaderComponent extends React.Component {
+class Menu extends React.Component {
   constructor(props) {
     super(props);
 
@@ -67,4 +67,4 @@ class HeaderComponent extends React.Component {
   }
 }
 
-export default HeaderComponent;
+export default Menu;

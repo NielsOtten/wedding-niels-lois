@@ -30,9 +30,9 @@ const importMusic = (nextState, cb) => {
 // https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
 const routes = (
   <Route path="/" component={App}>
-    <IndexRoute getComponent={importHome} />
-    <Route path="travel" getComponent={importTravel} />
-    <Route path="music" getComponent={importMusic} />
+    <IndexRoute getComponent={importHome} transition={false}/>
+    <Route path="travel" getComponent={importTravel} transition={true}/>
+    <Route path="music" getComponent={importMusic} transition={true}/>
   </Route>
 );
 
