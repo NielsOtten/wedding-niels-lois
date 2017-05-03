@@ -17,8 +17,8 @@ export default vo => `
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     ${vo.cssBundle ? '<link rel="stylesheet" type="text/css" href="' + vo.cssBundle + '">' : ''}
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Montserrat" rel="stylesheet">
-
     <title>Wedding Niels & Loïs</title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
 
   <body>
