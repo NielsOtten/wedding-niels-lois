@@ -12,7 +12,7 @@ class Header extends React.Component {
     this.state = {
       mobileImage: this.getCurrentImage(this.image, true),
       desktopImage: this.getCurrentImage(this.image)
-    }
+    };
   }
 
   componentDidMount() {
