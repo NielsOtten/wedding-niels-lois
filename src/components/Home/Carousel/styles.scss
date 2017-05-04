@@ -1,0 +1,22 @@
+@import '../../../shared-styles/variables';
+
+.background-image {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+
+  &:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  .main-image {
+    background: url('../../../images/Desktop_image_1.jpg') center center / cover no-repeat;
+    width: 50%;
+    position: absolute;
+    height: 125%;
+  }
+}

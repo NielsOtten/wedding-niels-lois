@@ -3,6 +3,7 @@ import styles from './styles.scss';
 
 import Spotify from './Spotify';
 import RSVP from './RSVP';
+import Carousel from './Carousel';
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,9 +27,7 @@ class Home extends React.Component {
             </p>
           </div>
         </section>
-        <section className={styles['fort-vechten']}>
-          {/* Foto's van fort vechten */}
-        </section>
+        {/*<Carousel/>*/}
         <RSVP/>
         <section className={styles['container']}>
           <div className={styles['row']}>

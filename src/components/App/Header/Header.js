@@ -74,7 +74,6 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
   image: PropTypes.string,
   carousel: PropTypes.bool,
   transition: PropTypes.bool

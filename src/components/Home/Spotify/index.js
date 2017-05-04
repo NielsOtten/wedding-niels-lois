@@ -30,7 +30,6 @@ class Spotify extends React.Component {
       .then(response => {
         this.setState({
           songs: response.albums.items.map(album => {
-            console.log(album);
             return <Song
               key={album.id}
               id={album.id}
@@ -50,7 +49,7 @@ class Spotify extends React.Component {
 
   render() {
     return(
-      <section className={styles['container']}>
+      <section className={styles['container-spotify']}>
         <div className={styles['spotify']}>
           <div className={styles['input-container']}>
             <div className={styles['input-wrapper']}>
