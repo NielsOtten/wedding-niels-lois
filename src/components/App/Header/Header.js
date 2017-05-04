@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import styles from './styles.scss';
+import Parallax from '../../Home/Parallax';
 
 class Header extends React.Component {
   constructor(props) {
@@ -39,8 +40,18 @@ class Header extends React.Component {
   render() {
     return (
       <div className={this.props.transition ? styles['small-header'] : styles['big-header']}>
-        <div className={styles['mobile-image']} style={{backgroundImage: 'url(' + this.state.mobileImage + ')'}}/>
-        <div className={styles['desktop-image']} style={{backgroundImage: 'url(' + this.state.desktopImage + ')'}}/>
+        <Parallax className={styles['mobile-image']}
+                  bgImage={this.state.mobileImage}
+                  bgHeight="100%"
+                  bgWidth="100%"
+                  bgClassName={styles['parallax-image']}
+                  strength={150}/>
+        <Parallax className={styles['desktop-image']}
+                  bgImage={this.state.desktopImage}
+                  bgHeight="100%"
+                  bgWidth="100%"
+                  bgClassName={styles['parallax-image']}
+                  strength={150}/>
         <div className={styles['center-text']}>
           <div className={styles['text']}>
             The Future
