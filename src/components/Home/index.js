@@ -24,21 +24,40 @@ class Home extends React.Component {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eligendi id illo illum impedit minus.
             </p>
           </div>
-          {/* Text over Bruiloft hier Misschien tekst over onzelf */}
         </section>
-        <section>
-          {/* Text over de planning met mooie icoontjes */}
+        <section className={styles['fort-vechten']}>
+          {/* Foto's van fort vechten */}
         </section>
-        <section>
+        <section className={styles['container']}>
+          <div className={styles['row']}>
+            <h2>Planning</h2>
+            <div className={styles['time']}>
+              <img className={styles['icon']} src={require('../../images/engagement-ring.svg')} alt="Wedding ring"/>
+              <p>Kerkdienst</p>
+              <h6>19:00</h6>
+            </div>
+            <div className={styles['time']}>
+              <img className={styles['icon']} src={require('../../images/chat.svg')} alt="Praten"/>
+              <p>Receptie</p>
+              <h6>20:30</h6>
+            </div>
+            <div className={styles['time']}>
+              <img className={styles['icon']} src={require('../../images/chat.svg')} alt="Feest"/>
+              <p>Feest</p>
+              <h6>21:30</h6>
+            </div>
+          </div>
+        </section>
+        <section className={styles['container']}>
           {/* Meld je aan stuk */}
         </section>
-        <section>
+        <section className={styles['container']}>
           {/* Text over De muziek lijst*/}
         </section>
-        <section>
+        <section className={styles['container']}>
           {/* Spotify stuk */}
         </section>
-        <section>
+        <section className={styles['container']}>
           {/* Location */}
         </section>
       </div>

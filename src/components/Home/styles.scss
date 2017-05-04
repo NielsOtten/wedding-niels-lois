@@ -4,6 +4,12 @@
 .container {
   position: relative;
   padding: 3rem 0;
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+  max-width: 57.5rem;
+  margin: 0 auto;
 }
 
 .text {
@@ -14,19 +20,67 @@
   box-sizing: border-box;
   margin-bottom: 40px;
   color: $fontColor;
-
-  h2 {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    box-sizing: inherit;
-    font-weight: bold;
-    color: #000000;
-  }
 }
 
 @media ($mobile) {
   .text {
     float: none;
     width: 100%;
+  }
+}
+
+.row {
+  position: relative;
+
+  &:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  &:before {
+    content: " ";
+    width: 1250px;
+    height: 100%;
+    margin-left: -250px;
+    background: #f8f3ed;
+    z-index: 1;
+    position: absolute;
+  }
+
+  h2 {
+    padding: 3rem 0.6rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .time {
+    width: 33.3333%;
+    box-sizing: inherit;
+    float: left;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+
+    .icon {
+      max-width: 80px;
+    }
+
+    p {
+      color: $fontColor;
+      text-align: center;
+    }
+
+    h6 {
+      color: #000000;
+      font-weight: bold;
+    }
+
+    @media ($mobile) {
+      width: 50%;
+    }
   }
 }
