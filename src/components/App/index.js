@@ -31,7 +31,7 @@ class App extends React.Component {
       <div style={{height: 80+'vh'}}>
         <Menu transition={this.state.transition}/>
         <div className={styles.content}>
-          <Header title="test" transition={this.state.transition}/>
+          <Header transition={this.state.transition}/>
           {this.props.children}
         </div>
       </div>

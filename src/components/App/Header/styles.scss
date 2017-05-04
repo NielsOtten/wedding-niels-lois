@@ -39,6 +39,23 @@
   }
 }
 
+.rsvp {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-80%);
+  transform: translate(-50%,-80%);
+
+  button {
+    background: #ffffff;
+    border: none;
+    padding: 10px;
+    box-sizing: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 .small-header {
   height: 60vh;
 }

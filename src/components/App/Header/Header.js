@@ -51,6 +51,11 @@ class Header extends React.Component {
             August 17, 2017
           </div>
         </div>
+        <div className={styles['rsvp']}>
+          <button>
+            Meld je aan
+          </button>
+        </div>
       </div>
     );
   }
