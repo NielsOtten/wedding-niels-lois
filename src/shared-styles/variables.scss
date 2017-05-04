@@ -3,46 +3,23 @@ $padding: 15px;
 $defaultFont: 'Roboto', Fallback, sans-serif;
 $primaryFontColor: #212121;
 
-.colomn {
-  max-width: 1200px;
-  padding: 30px 5% 0 5%;
-  font-family: $defaultFont;
+$fontColor: #8c8c8c;
 
-  .col-6 {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
-    font-size: 1.11111rem;
-    line-height: 1.66667rem;
+// Media queries
+$mobile: 'max-width: 480px';
 
-    &:first-child {
-      padding-right: 5%;
-    }
-
-    &:last-child {
-      padding-left: 5%;
-    }
-
-    @media only screen
-    and (max-width: 480px) {
-      width: 100%;
-      float: none;
-
-      &:first-child {
-        padding-right: 0;
-      }
-
-      &:last-child {
-        padding-left: 0;
-      }
-    }
-  }
+html {
+  box-sizing: border-box;
 }
 
-.container {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  text-align: justify;
 }
 
 a {
