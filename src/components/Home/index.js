@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './styles.scss';
 
-import Colomn from '../Colomn/Colomn';
+import Spotify from './Spotify';
+import RSVP from './RSVP';
 
 class Home extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Home extends React.Component {
         <section className={styles['fort-vechten']}>
           {/* Foto's van fort vechten */}
         </section>
+        <RSVP/>
         <section className={styles['container']}>
           <div className={styles['row']}>
             <h2>Planning</h2>
@@ -48,12 +50,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
-        <section className={styles['container']}>
-          {/* Meld je aan stuk */}
-        </section>
-        <section className={styles['container']}>
-          {/* Text over De muziek lijst*/}
-        </section>
+        <Spotify/>
         <section className={styles['container']}>
           {/* Spotify stuk */}
         </section>

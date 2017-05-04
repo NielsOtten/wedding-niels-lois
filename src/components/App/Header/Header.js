@@ -56,6 +56,7 @@ class Header extends React.Component {
             Meld je aan
           </button>
         </div>
+        <div className={styles['icon-scroll']}/>
       </div>
     );
   }

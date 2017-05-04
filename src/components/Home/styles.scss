@@ -1,17 +1,6 @@
 
 @import '../../shared-styles/variables';
 
-.container {
-  position: relative;
-  padding: 3rem 0;
-  content: "";
-  display: table;
-  clear: both;
-  width: 100%;
-  max-width: 57.5rem;
-  margin: 0 auto;
-}
-
 .text {
   transform: matrix(1, 0, 0, 1, 0, 0);
   float: left;
