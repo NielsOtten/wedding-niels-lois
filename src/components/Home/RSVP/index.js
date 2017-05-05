@@ -47,13 +47,15 @@ class RSVP extends React.Component {
 
   render() {
     return(
-      <section className={styles['container']}>
-        <h2>Meld je aan</h2>
-        <form onSubmit={this.handleSubmit}>
-          <input type="email" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
-          <input type="number" id="total" name="total" placeholder="Aantal gasten" onChange={this.handleChange}/>
-          <input className={styles['submit']} type="submit" value="Verzend"/>
-        </form>
+      <section className={styles['rsvp']}>
+        <div className={styles['container']}>
+          <h2>Meld je aan</h2>
+          <form onSubmit={this.handleSubmit}>
+            <input type="email" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
+            <input type="number" id="total" name="total" placeholder="Aantal gasten" onChange={this.handleChange}/>
+            <input className={styles['submit']} type="submit" value="Voeg toe"/>
+          </form>
+        </div>
       </section>
     );
   }

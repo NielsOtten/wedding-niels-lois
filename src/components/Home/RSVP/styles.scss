@@ -1,1 +1,47 @@
 @import '../../../shared-styles/variables';
+
+.rsvp {
+  text-align: center;
+  background-color: #f8f3ed;
+  margin: 3rem 0;
+
+  h2 {
+    padding: 0 0.6rem;
+  }
+
+  input {
+    outline: none;
+  }
+
+  input[type='email'], input[type='number'] {
+    padding: 0.6rem;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid $fontColor;
+
+    @media ($mobile) {
+      display: block;
+      width: 100%;
+      margin: 0.3rem 0 !important;
+    }
+
+    &:nth-child(1) {
+      margin: 0 0.3rem 0 0.6rem;
+    }
+
+    &:nth-child(2) {
+      margin: 0 0.6rem 0 0.3rem;
+    }
+  }
+
+  input[type='submit'] {
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid $fontColor;
+    background: #ffffff;
+    padding: 0.6rem;
+    cursor: pointer;
+  }
+}
