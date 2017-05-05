@@ -4,6 +4,8 @@
   position: relative;
   overflow: hidden;
   height: 400px;
+  max-width: 57.5rem;
+  margin: 0 auto;
 
   &:after {
     content: " "; /* Older browser do not support empty content */
@@ -22,5 +24,32 @@
 }
 
 .parallax {
+  width: 47%;
+  box-sizing: border-box;
+  padding: 2rem;
   height: 100%;
+  float: left;
+
+  &:nth-child(1) {
+    margin: 0 1% 0 2%;
+  }
+
+  &:nth-child(2) {
+    margin: 0 2% 0 1%;
+  }
+  
+  @media ($tablet) {
+    width: 98%;
+    float: none;
+    margin: 0 auto !important;
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.parallax-2 {
+  height: 100% !important;
+  background-size: cover !important;
 }

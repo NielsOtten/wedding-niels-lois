@@ -127,22 +127,8 @@
   max-height: 1200px;
 }
 
-.desktop-image {
+.desktop-image, .mobile-image {
   height: 100%;
-  background: no-repeat 50%;
-  background-size: cover;
-  transition: background-image 1s ease-in;
-  -moz-transition: background-image 1s ease-in;
-  -webkit-transition: background-image 1s ease-in;
-}
-
-.mobile-image {
-  height: 100%;
-  background: no-repeat 50%;
-  background-size: cover;
-  transition: background-image 1s ease-in;
-  -moz-transition: background-image 1s ease-in;
-  -webkit-transition: background-image 1s ease-in;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 700px) {
