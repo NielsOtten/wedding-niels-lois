@@ -37,10 +37,14 @@ class Spotify extends React.Component {
               image={album.images[1].url}/>
           })
         });
+      })
+      .catch(error => {
+        console.log(error);
       })}, WAIT_INTERVAL);
   }
 
   searchAlbums(query) {
+    if (query === '' || query === 'undefined') throw 'No search query';
     return fetch('https://api.spotify.com/v1/search?q=' + query + '&type=album')
       .then(response => {
         return response.json();
