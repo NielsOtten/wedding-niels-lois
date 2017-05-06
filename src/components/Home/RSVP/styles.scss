@@ -13,17 +13,24 @@
     outline: none;
   }
 
+  @media ($mobile) {
+    form {
+      margin: 0 0.6rem;
+    }
+  }
+
   input[type='email'], input[type='number'] {
-    padding: 0.6rem;
+    padding: 0.6rem 0;
     border-left: 0;
     border-top: 0;
     border-right: 0;
     border-bottom: 2px solid $fontColor;
+    box-sizing: inherit;
 
     @media ($mobile) {
       display: block;
       width: 100%;
-      margin: 0.3rem 0 !important;
+      margin: 0.6rem 0!important;
     }
 
     &:nth-child(1) {
