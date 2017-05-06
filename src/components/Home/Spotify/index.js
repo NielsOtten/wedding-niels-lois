@@ -52,13 +52,21 @@ class Spotify extends React.Component {
       <section className={styles['container-spotify']}>
         <div className={styles['spotify']}>
           <div className={styles['input-container']}>
+            <h2>Guilty pleasures</h2>
+            <p>
+              Ons knal feest wordt gehouden in een bunker, dit is de ultieme locatie voor een feest alleen er is een probleem.
+              We hebben daar geen internet, dit betekent dat we alle muziek van te voren moeten downloaden. Als je nummers hebt die je sowieso
+              wil horen <strong>17 Augustus</strong> zoek ze dan hier op en voeg ze toe aan onze afspeellijst!
+            </p>
             <div className={styles['input-wrapper']}>
-              <input className={styles['input']} type="text" name="music" onChange={this.handleChange}/>
+              <input className={styles['input']} type="text" name="music" placeholder="Muziek" onChange={this.handleChange}/>
             </div>
           </div>
-          <ul className={styles['songs']}>
-            {this.state.songs}
-          </ul>
+          <div className={styles['container']} style={{paddingTop: 0}}>
+            <ul className={styles['songs']}>
+              {this.state.songs}
+            </ul>
+          </div>
         </div>
       </section>
     );

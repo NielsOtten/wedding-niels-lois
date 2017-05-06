@@ -22,25 +22,30 @@
 }
 
 .input-container {
-  height: 150px;
   position: relative;
   background: #5b7461;
+  padding: 3rem 0;
 
   .input-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 600px;
-    width: 100%;
+    text-align: center;
   }
 
   h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    color: $primaryFontColor;
     font-family: $defaultFont;
+  }
+
+  h2, p {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  p {
+    padding: 0.6rem 0 1.2rem 0;
   }
 
   .input {
