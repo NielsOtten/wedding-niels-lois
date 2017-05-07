@@ -60,7 +60,7 @@ class Plan extends React.Component {
             <div className={styles['time']}>
               <img className={styles['icon']} src={require('../../../images/church.svg')} alt="Kerk"/>
               <p>Kerkdienst</p>
-              <h6>19:00</h6>
+              <h6>18:45</h6>
             </div>
             <div className={styles['time']}>
               <img className={styles['icon']} src={require('../../../images/chat.svg')} alt="Praten"/>

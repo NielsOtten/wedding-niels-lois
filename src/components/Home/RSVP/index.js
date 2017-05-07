@@ -56,6 +56,9 @@ class RSVP extends React.Component {
             <input className={styles['submit']} type="submit" value="Voeg toe"/>
           </form>
         </div>
+        <canvas>
+
+        </canvas>
       </section>
     );
   }

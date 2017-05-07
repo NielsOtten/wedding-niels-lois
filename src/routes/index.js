@@ -14,25 +14,11 @@ const importHome = (nextState, cb) => {
     .catch((e) => { throw e; });
 };
 
-const importTravel = (nextState, cb) => {
-  System.import('../components/Travel')
-    .then(module => cb(null, module.default))
-    .catch((e) => { throw e; });
-};
-
-const importMusic = (nextState, cb) => {
-  System.import('../components/Music')
-    .then(module => cb(null, module.default))
-    .catch((e) => { throw e; });
-};
-
 // We use `getComponent` to dynamically load routes.
 // https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
 const routes = (
   <Route path="/" component={App}>
     <IndexRoute getComponent={importHome} transition={false}/>
-    <Route path="travel" getComponent={importTravel} transition={true}/>
-    <Route path="music" getComponent={importMusic} transition={true}/>
   </Route>
 );
 
@@ -41,8 +27,6 @@ const routes = (
 // https://github.com/gaearon/react-hot-loader/issues/288
 if (module.hot) {
   require('../components/Home');    // eslint-disable-line global-require
-  require('../components/Travel');   // eslint-disable-line global-require
-  require('../components/Music');   // eslint-disable-line global-require
 }
 
 export default routes;
