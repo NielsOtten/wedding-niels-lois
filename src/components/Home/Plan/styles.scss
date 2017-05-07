@@ -66,6 +66,15 @@
       color: $fontColor;
       margin: 16px 0;
     }
+
+    a {
+      text-align: right;
+      width: 100%;
+      display: block;
+      color: #000000;
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 
   .planning {
