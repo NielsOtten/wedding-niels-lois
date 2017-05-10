@@ -83,7 +83,6 @@ class RSVP extends React.Component {
         return response.json();
       })
       .then(json => {
-        console.log(json);
         if (json.success === false) {
           let i = 12312;
 
