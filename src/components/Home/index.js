@@ -37,6 +37,9 @@ class Home extends React.Component {
         <section className={styles['container']}>
           {/* Location */}
         </section>
+        <footer className={styles['container']}>
+          Gemaakt door <strong>Niels Otten</strong>
+        </footer>
       </div>
     );
   }
