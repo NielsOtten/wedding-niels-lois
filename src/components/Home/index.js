@@ -34,9 +34,6 @@ class Home extends React.Component {
         <RSVP/>
         <Plan/>
         <Spotify/>
-        <section className={styles['container']}>
-          {/* Location */}
-        </section>
         <footer className={styles['container']}>
           Gemaakt door <strong>Niels Otten</strong>
         </footer>

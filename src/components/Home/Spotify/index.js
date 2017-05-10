@@ -64,7 +64,7 @@ class Spotify extends React.Component {
               <input className={styles['input']} type="text" name="music" placeholder="Muziek" onChange={this.handleChange}/>
             </div>
           </div>
-          <div className={styles['container']} style={{paddingTop: 0}}>
+          <div className={styles['container']} style={{paddingTop: 0, paddingBottom: 0}}>
             <ul className={styles['songs']}>
               {this.state.songs}
             </ul>
