@@ -6,7 +6,9 @@ class Song extends React.Component {
     super(props);
 
     this.state = {
-      playing: false
+      playing: false,
+      loading: false,
+      errors: [],
     };
 
     this.handleClick = this.handleClickOnSong.bind(this);
@@ -39,7 +41,41 @@ class Song extends React.Component {
 
   handleAddClick(e) {
     e.preventDefault();
-    console.log('test');
+
+    if (this.state.loading) return false;
+
+    this.setState({
+      loading: true
+    });
+
+    const conf = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        spotifyId: this.props.id,
+        name: this.props.title
+      })
+    };
+
+    fetch('/addSong', conf)
+      .then(res => {
+        this.setState({
+          loading: false
+        });
+
+        return res.json()
+      })
+      .then(json => {
+        if (json.success) {
+          alert('Nummer toegevoegd.');
+          this.setState({
+            errors: []
+          })
+        }
+      })
   }
 
   fetchTracks(albumId) {

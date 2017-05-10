@@ -12,6 +12,7 @@ import routes from '../routes';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import Guest from './Guest';
+import Song from './Song';
 
 const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
 const app = express();
@@ -35,12 +36,12 @@ app.use(bodyParser.json());
 // Setup the public directory so that we can server static assets.
 app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
 
-app.post('/addRSVP', (request, response) => {
-  response.setHeader('Content-Type', 'application/json');
+app.post('/addRSVP', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
 
-  const query = {email: request.body.email};
+  const query = {email: req.body.email};
 
-  const guest = new Guest(request.body);
+  const guest = new Guest(req.body);
   guest.markModified('guests');
   const usertGuest = guest.toObject();
   delete usertGuest._id;
@@ -53,30 +54,50 @@ app.post('/addRSVP', (request, response) => {
     'new': true,
     setDefaultsOnInsert: true
   }, (err, doc) => {
-    if (err)  return response.json({'success': false, err});
-    return response.json({'succes': 'true'})
+    if (err)  return res.json({'success': false, err});
+    return res.json({'success': 'true'})
+  });
+});
+
+app.post('/addSong', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+
+  const query = {spotifyId: req.body.spotifyId, name: req.body.name,};
+
+  Song.findOneAndUpdate(query, {
+    $inc: {
+      voting: 1
+    }
+  }, {
+    upsert: true,
+    runValidators: true,
+    'new': true,
+    setDefaultsOnInsert: true
+  }, (err, doc) => {
+    if (err)  return res.json({'success': false, err});
+    return res.json({'success': true})
   });
 });
 
 // Setup server side routing.
-app.get('*', (request, response) => {
-  const history = createMemoryHistory(request.originalUrl);
+app.get('*', (req, res) => {
+  const history = createMemoryHistory(req.originalUrl);
 
   match({ routes, history }, (error, redirectLocation, renderProps) => {
     if (error) {
-      response.status(500).send(error.message);
+      res.status(500).send(error.message);
     } else if (redirectLocation) {
-      response.redirect(302, `${redirectLocation.pathname}${redirectLocation.search}`);
+      res.redirect(302, `${redirectLocation.pathname}${redirectLocation.search}`);
     } else if (renderProps) {
       // When a React Router route is matched then we render
       // the components and assets into the template.
-      response.status(200).send(template({
+      res.status(200).send(template({
         root: renderToString(<RouterContext {...renderProps} />),
         jsBundle: clientAssets.main.js,
         cssBundle: clientAssets.main.css,
       }));
     } else {
-      response.status(404).send('Not found');
+      res.status(404).send('Not found');
     }
   });
 });
