@@ -32,4 +32,11 @@
 
 footer {
   text-align: center;
+  
+  a {
+    color: black;
+  }
+  a:active {
+    color: #000;
+  }
 }

@@ -35,7 +35,7 @@ class Home extends React.Component {
         <Plan/>
         <Spotify/>
         <footer className={styles['container']}>
-          Gemaakt door <strong>Niels Otten</strong>
+          Gemaakt door <strong><a href="https://www.linkedin.com/in/nkotten" target="_blank">Niels Otten</a></strong>
         </footer>
       </div>
     );
