@@ -16,6 +16,7 @@ class RSVP extends React.Component {
         <input key={1} type="text" id="guests" name="guests" onChange={this.handleGuestChange} data-nth={1}/>
       ],
       errors: [],
+      loading: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -66,6 +67,12 @@ class RSVP extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    if (this.state.loading) return false;
+
+    this.setState({
+      loading: true
+    });
+
     let stateWithoutInputs = Object.assign({}, this.state);
     stateWithoutInputs.inputs = undefined;
 
@@ -80,11 +87,14 @@ class RSVP extends React.Component {
 
     fetch('/addRSVP', conf)
       .then(response => {
+        this.setState({
+          loading: false
+        });
         return response.json();
       })
       .then(json => {
         if (json.success === false) {
-          let i = 12312;
+          let i = 0;
 
           this.setState({
             errors: Object.keys(json.err.errors).map(error => {
@@ -93,6 +103,7 @@ class RSVP extends React.Component {
             })
           });
         } else {
+          alert('Aanmelden gelukt.');
           this.setState({
             errors: []
           })
@@ -115,7 +126,7 @@ class RSVP extends React.Component {
             <div className={styles['guests']}>
               {this.state.inputs.map(input => (input))}
             </div>
-            <input className={styles['submit']} type="submit" value="Voeg toe"/>
+            <input className={styles['submit']} type="submit" value={this.state.loading ? 'Verzenden...' : 'Voeg toe'}/>
           </form>
         </div>
       </section>
