@@ -38,12 +38,24 @@ app.use(express.static(path.join(process.cwd(), KYT.PUBLIC_DIR)));
 app.post('/addRSVP', (request, response) => {
   response.setHeader('Content-Type', 'application/json');
 
+  const query = {email: request.body.email};
+
   const guest = new Guest(request.body);
-  guest.save()
-    .then(a => response.json({
-      "succes": "true"
-    }))
-    .catch(e => response.json(e));
+  guest.markModified('guests');
+  const usertGuest = guest.toObject();
+  delete usertGuest._id;
+
+  Guest.findOneAndUpdate(query, {
+    $set: usertGuest
+  }, {
+    upsert: true,
+    runValidators: true,
+    'new': true,
+    setDefaultsOnInsert: true
+  }, (err, doc) => {
+    if (err)  return response.json({'success': false, err});
+    return response.json({'succes': 'true'})
+  });
 });
 
 // Setup server side routing.

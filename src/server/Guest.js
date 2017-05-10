@@ -6,17 +6,16 @@ export default mongoose.model('Guest', {
     type: String,
     trim: true,
     lowercase: true,
-    required: 'Email address is required',
+    required: 'Emailadres moet ingevuld zijn.',
     validate: {
       isAsync: true,
       validator: isEmail,
-      message: '{VALUE} is not a valid email!'
+      message: '{VALUE} is niet een emailadres. '
     }
   },
-  total: {
-    type: Number,
-    required: 'Total is required'
-  },
+  guests: [{
+    type: String,
+  }],
   timestamp: {
     type: Date,
     default: () => new Date(),
