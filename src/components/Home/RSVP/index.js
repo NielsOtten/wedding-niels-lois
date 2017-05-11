@@ -115,14 +115,14 @@ class RSVP extends React.Component {
     return(
       <section className={styles['rsvp']}>
         <div className={styles['container']}>
-          <h2>Meld je aan</h2>
+          <h2>RSVP / Meld je aan</h2>
           <ul className={styles['errors']}>
             {this.state.errors.map(error => (error))}
           </ul>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" onChange={this.handleChange}/>
-            <label htmlFor="guests">Namen:</label>
+            <label htmlFor="guests">Naam/Namen:</label>
             <div className={styles['guests']}>
               {this.state.inputs.map(input => (input))}
             </div>

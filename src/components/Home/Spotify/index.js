@@ -58,7 +58,7 @@ class Spotify extends React.Component {
           <div className={styles['input-container']}>
             <h2>Guilty pleasures</h2>
             <p>
-              Vanwege het slechte internet ontvangst op de locatie (in een bunker) en het feit dat wij heel nieuwsgierig zijn naar jullie verzoeknummers, hierbij de vraag of jullie een swingende plaat weten voor de feestavond.Je kunt het via deze zoekbalk opzoeken (nummer en zanger(es)) en op de afbeelding een ‘preview’ beluisteren.Wij zullen 2 weken voor de bruiloft alle inzendingen beluisteren en er een afspeellijst van maken.We zijn benieuwd! die je sowiesowil horen <strong>17 Augustus</strong> zoek ze dan hier op en voeg ze toe aan onze afspeellijst!
+              Vanwege het slechte internet ontvangst op de locatie (in een bunker) en het feit dat wij heel nieuwsgierig zijn naar jullie verzoeknummers, hierbij de vraag of jullie een swingende plaat weten voor de feestavond. Je kunt het via deze zoekbalk opzoeken (nummer en zanger(es)) en op de afbeelding een ‘preview’ beluisteren. Wij zullen 2 weken voor de bruiloft alle inzendingen beluisteren en er een afspeellijst van maken. We zijn benieuwd!
             </p>
             <div className={styles['input-wrapper']}>
               <input className={styles['input']} type="text" name="music" placeholder="Muziek" onChange={this.handleChange}/>
