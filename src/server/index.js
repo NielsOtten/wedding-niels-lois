@@ -14,6 +14,8 @@ import mongoose from 'mongoose';
 import Guest from './Guest';
 import Song from './Song';
 
+const port = process.env.PORT || parseInt(KYT.SERVER_PORT, 10);
+
 const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
 const app = express();
 
@@ -102,4 +104,4 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(parseInt(KYT.SERVER_PORT, 10));
+app.listen(port);
