@@ -53,9 +53,6 @@ class Menu extends React.Component {
             <li className={styles['menu-link']} onClick={() => this.openMenu()}>
               <Link to="/travel">Travel</Link>
             </li>
-            <li>
-
-            </li>
           </ul>
         </div>
       </header>
