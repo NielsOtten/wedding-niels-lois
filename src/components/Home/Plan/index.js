@@ -18,10 +18,12 @@ class Plan extends React.Component {
   componentDidMount() {
     this.onResize();
     window.addEventListener('resize', this.onResize);
+    window.addEventListener('orientationchange', this.onResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('orientationchange', this.onResize);
   }
 
   onResize() {
