@@ -10,9 +10,9 @@ export default vo => `
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta charSet='utf-8' />
     <meta httpEquiv="Content-Language" content="en" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
-    <link id="favicon" rel="shortcut icon" href="/kyt-favicon.png" sizes="16x16 32x32" type="image/png" />
+    <link id="favicon" rel="shortcut icon" href="${require('../images/engagement-ring.svg')}" sizes="16x16 32x32" type="image/png" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     ${vo.cssBundle ? '<link rel="stylesheet" type="text/css" href="' + vo.cssBundle + '">' : ''}
