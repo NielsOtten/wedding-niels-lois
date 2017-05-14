@@ -5,6 +5,7 @@ import Spotify from './Spotify';
 import RSVP from './RSVP';
 import Carousel from './Carousel';
 import Plan from './Plan';
+import Contact from './Contact';
 
 class Home extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class Home extends React.Component {
         <RSVP/>
         <Plan/>
         <Spotify/>
+        <Contact/>
         <footer className={styles['container']}>
           Gemaakt door <strong><a href="https://www.linkedin.com/in/nkotten" target="_blank">Niels Otten</a></strong>
         </footer>
