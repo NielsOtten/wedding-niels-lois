@@ -20,7 +20,7 @@ class Home extends React.Component {
             <h2>Verkering</h2>
             <p>
               De zomer van 2012 begon ons verhaal. Hiervoor kenden wij elkaar al een tijdje, maar Niels vond mijn beste vriendin interessanter en ik wilde altijd een jongen van minimaal 2 jaar ouder.. Die zomer skypten we erg veel, als vrienden, dat wel. Na onze vakanties leek het ons beiden leuk om eens af te spreken. Op 21 augustus was dan onze date. Niels was even vergeten dat hij eigenlijk rijles had, maar draaide met liefde voor de kosten op. We gingen uiteten bij ‘Le Connaisseur’. Met wel wat zenuwen liepen we richting de trein. Ik zei nog iets als: 'brr fris' zeg. Wat Niels als hint zag en vervolgens midden op Vredenburgplein de eerste kus gaf. In diezelfde week bleven we skypen en afspreken waarna we op 26 augustus besloten een relatie te beginnen. Dit is alweer zo lang geleden! Ik kan niet wachten om weer een stap verder te gaan in onze relatie.<br/>
-              <strong>Liefs, Loïs</strong>
+              <strong>- Loïs</strong>
             </p>
           </div>
           <div className={styles['text']}>

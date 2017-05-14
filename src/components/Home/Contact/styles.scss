@@ -4,7 +4,7 @@
   text-align: center;
 
   h2 {
-   padding: 0 0.6rem;
+    padding: 0 0.6rem;
   }
 
   .contact-description {
@@ -21,6 +21,21 @@
   padding: 0 0.6rem;
 
   h3 {
+    font-weight: bold;
     font-size: 16px;
+  }
+
+  span {
+    display: block;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+}
+
+@media ($mobile) {
+  .contact {
+    width: 100%;
+    float: none;
+    padding: 1.2rem 0.6rem;
   }
 }
