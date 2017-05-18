@@ -47,8 +47,7 @@ class Plan extends React.Component {
           <div className={styles['information']}>
             <div className={[styles['location'], styles['info']].join('')}>
               <h3>Locatie</h3>
-              <p>Overdag zullen wij met de daggasten op Fort Vechten vertoeven. Om 18:45 nodigen we jullie van harte uit om de kerkelijke inzegening bij te wonen in de Oude Kerk, 1e Dorpsstraat 1, te Zeist. Ons geloof speelt een grote rol in ons leven en daarom ben je hier ook van harte voor uitgenodigd. Om 20:30 is vervolgens de receptie op Fort Vechten te Bunnik in de Reversezaal. De parkeerplaats is schuintegenover de Achterdijk 21, te Zeist. Aansluitend is het feest op dezelfde locatie.
-              </p>
+              <p>Overdag zullen wij met de daggasten op Fort Vechten vertoeven. Om 18:45 nodigen we jullie van harte uit om de kerkelijke inzegening bij te wonen in de Oude Kerk, 1e Dorpsstraat 1, te Zeist. Ons geloof speelt een grote rol in ons leven en daarom ben je hier ook van harte voor uitgenodigd. Om 20:30 is vervolgens de receptie op Fort Vechten te Bunnik in de Reversezaal. De parkeerplaats is schuin tegenover de Achterdijk 21, te Zeist. Aansluitend is het feest op dezelfde locatie.</p>
               <a href="https://www.google.nl/maps/place/Fort+Vechten/@52.0589293,5.165205,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6663841421963:0xa18f6ce098a24557!8m2!3d52.0589293!4d5.1673937?q=fort+vechten&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjfwOuXpd7TAhWSJ1AKHVg4BRIQ_AUICigB" target="_blank">Routebeschrijving</a>
             </div>
             <div className={[styles['location'], styles['info']].join('')}>
@@ -57,8 +56,7 @@ class Plan extends React.Component {
             </div>
             <div className={[styles['location'], styles['info']].join('')}>
               <h3>Cadeau</h3>
-              <p>Het zal je vast niet verbazen, maar deze dag is een behoorlijke investering. We zijn daarom enorm gelukkig met een envelopje met inhoud! Mocht je toch liever iets tastbaars willen geven dan hebben wij ook een verlanglijstje opgesteld welke te vinden is via deze link:
-              </p>
+              <p>Het zal je vast niet verbazen, maar deze dag is een behoorlijke investering. We zijn daarom enorm gelukkig met een envelopje met inhoud! Mocht je toch liever iets tastbaars willen geven dan hebben wij ook een verlanglijstje opgesteld welke te vinden is via deze link:</p>
               <a href="https://www.lijstje.nl/287381" target="_blank">Lijstje.nl</a>
             </div>
           </div>

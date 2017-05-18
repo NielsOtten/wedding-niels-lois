@@ -10,10 +10,11 @@ class Contact extends React.Component {
     return(
       <section className={[styles['container'], styles['contact-container']].join(' ')}>
         <h2>Contact</h2>
-        <p className={styles['contact-description']}>Mocht je vragen hebben over de trouwdag, of zou je graag iets willen doen op de dag zelf, neem dan voor 17 juli contact op met een van onze ceremoniemeesteressen.</p>
+        <p className={styles['contact-description']}>Mocht je vragen hebben over de trouwdag, of zou je graag iets willen doen op de dag zelf, neem dan vóór 17 juli contact op met een van onze ceremoniemeesteressen.</p>
         <div className={styles['contact']}>
           <h3>Elja Dokter - Brandsma</h3>
-          <p>Contact gegevens....</p>
+          <span>Tel: +31 6 34843996</span>
+          <span>Email: elja_brandsma@live.com</span>
         </div>
         <div className={styles['contact']}>
           <h3>Femke van der Tuuk - Dokter</h3>
