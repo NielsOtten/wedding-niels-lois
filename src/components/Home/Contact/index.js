@@ -14,12 +14,12 @@ class Contact extends React.Component {
         <div className={styles['contact']}>
           <h3>Elja Dokter - Brandsma</h3>
           <span>Tel: +31 6 34843996</span>
-          <span>Email: elja_brandsma@live.com</span>
+          <span>Email: <a href="mailto:elja_brandsma@live.com">elja_brandsma@live.com</a></span>
         </div>
         <div className={styles['contact']}>
           <h3>Femke van der Tuuk - Dokter</h3>
           <span>Tel: +31 6 81125822</span>
-          <span>Email: femke_dokter@hotmail.com</span>
+          <span>Email: <a href="mailto:femke_dokter@hotmail.com">femke_dokter@hotmail.com</a></span>
         </div>
       </section>
     );
