@@ -16,10 +16,8 @@ export default vo => `
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     ${vo.cssBundle ? '<link rel="stylesheet" type="text/css" href="' + vo.cssBundle + '">' : ''}
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Montserrat" rel="stylesheet">
-    <title>Wedding Niels & Loïs</title>
-    
+
     <meta name="msapplication-TileColor" content="#ffffff">
-	  <meta name="msapplication-TileImage" content="/complimentos/images/icons/ms-icon-144x144.png">
 	  <meta name="theme-color" content="#ffffff">
     
     <meta property="og:url" content="http://nielsenlois.nl"/>
@@ -27,7 +25,7 @@ export default vo => `
 		<meta property="og:title" content="Wedding Niels & Loïs" />
 		<meta property="og:description" content="17 Augustus 2017 gaan Niels & Loïs trouwen! Be there!" />
 		<meta name="og:image:height" content="600">
-		<meta property="og:image" content="${require('../images/Share-image-fb.png')}" />
+		<meta property="og:image" content="/Share-image-whatsapp.png" />
 
 		<meta name="twitter:card" content="photo" />
 		<meta name="twitter:site" content="@nielsenlois" />
@@ -36,7 +34,7 @@ export default vo => `
 		
 		<meta name="twitter:image:width" content="1143">
 		<meta name="twitter:image:height" content="600">
-		<meta name="twitter:image" content="${require('../images/Share-image-fb.png')}" />
+		<meta name="twitter:image" content="/Share-image-fb.png" />
 		<meta name="twitter:url" content="http://nielsenlois.nl" />
   </head>
 
