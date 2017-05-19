@@ -23,9 +23,9 @@ export default vo => `
     <meta property="og:url" content="http://nielsenlois.nl"/>
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Wedding Niels & Loïs" />
-		<meta property="og:description" content="17 Augustus 2017 gaan Niels & Loïs trouwen! Be there!" />
+		<meta property="og:description" content="17 augustus 2017 gaan Niels & Loïs trouwen! Be there!" />
 		<meta name="og:image:height" content="600">
-		<meta property="og:image" content="/Share-image-whatsapp.png" />
+		<meta property="og:image" content="http://nielsenlois.nl/Share-image-whatsapp.png" />
 
 		<meta name="twitter:card" content="photo" />
 		<meta name="twitter:site" content="@nielsenlois" />
@@ -34,7 +34,7 @@ export default vo => `
 		
 		<meta name="twitter:image:width" content="1143">
 		<meta name="twitter:image:height" content="600">
-		<meta name="twitter:image" content="/Share-image-fb.png" />
+		<meta name="twitter:image" content="http://nielsenlois.nl/Share-image-fb.png" />
 		<meta name="twitter:url" content="http://nielsenlois.nl" />
   </head>
 
