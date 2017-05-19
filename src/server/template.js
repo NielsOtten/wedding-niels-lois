@@ -30,7 +30,7 @@ export default vo => `
 		<meta name="twitter:card" content="photo" />
 		<meta name="twitter:site" content="@nielsenlois" />
 		<meta name="twitter:title" content="Wedding Niels & Loïs" />
-		<meta name="twitter:description" content="17 Augustus 2017 gaan Niels & Loïs trouwen! Be there!" />
+		<meta name="twitter:description" content="17 augustus 2017 gaan Niels & Loïs trouwen! Be there!" />
 		
 		<meta name="twitter:image:width" content="1143">
 		<meta name="twitter:image:height" content="600">
