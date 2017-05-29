@@ -25,6 +25,11 @@
     max-width: 40rem;
     width: 100%;
     margin: 0 auto;
+    padding: 0 0.6rem;
+
+    @media ($mobile) {
+      padding: 0 5%;
+    }
   }
 
   form {
