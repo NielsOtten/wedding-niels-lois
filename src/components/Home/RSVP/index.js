@@ -115,7 +115,8 @@ class RSVP extends React.Component {
     return(
       <section className={styles['rsvp']}>
         <div className={styles['container']}>
-          <h2>RSVP / Meld je aan</h2>
+          <h2>RSVP</h2>
+          <p className={styles['rsvpText']}>Ben je helaas <strong>niet</strong> in staat om deze dag met ons mee te vieren? Meld je dan alsjeblieft hieronder af. We hopen elkaar op een ander moment weer te zien.</p>
           <ul className={styles['errors']}>
             {this.state.errors.map(error => (error))}
           </ul>
