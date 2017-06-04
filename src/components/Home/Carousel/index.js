@@ -18,7 +18,7 @@ class Carousel extends React.Component {
                   strength={75}/>
         <Parallax className={styles['parallax']}
                   bgClassName={styles['parallax-2']}
-                  bgImage={require('../../../images/Desktop_image_1.jpg')}
+                  bgImage={require('../../../images/LoisNielsLS-031.jpg')}
                   bgHeight="100%"
                   bgWidth="100%"
                   strength={75}/>

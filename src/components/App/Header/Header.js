@@ -24,17 +24,19 @@ class Header extends React.Component {
       });
 
       this.image++;
-      if (this.image >= 12) {
+      if (this.image >= 14) {
         this.image = 1;
       }
 
-      const nextDesktopImage = new Image();
-      nextDesktopImage.src = this.getCurrentImage(this.image + 1, false);
+      if (this.image < 13) {
+        const nextDesktopImage = new Image();
+        nextDesktopImage.src = this.getCurrentImage(this.image + 1, false);
 
-      const nextMobileImage = new Image();
-      nextMobileImage.src = this.getCurrentImage(this.image + 1, false);
+        const nextMobileImage = new Image();
+        nextMobileImage.src = this.getCurrentImage(this.image + 1, false);
+      }
 
-    }, 5000);
+    }, 5000, true);
   }
 
   render() {
@@ -62,11 +64,6 @@ class Header extends React.Component {
             August 17, 2017
           </div>
         </div>
-        {/*<div className={styles['rsvp']}>*/}
-          {/*<button>*/}
-            {/*Meld je aan*/}
-          {/*</button>*/}
-        {/*</div>*/}
         <div className={styles['icon-scroll']}/>
       </div>
     );
@@ -77,7 +74,7 @@ class Header extends React.Component {
   }
 
   initImages() {
-    for (let i = 1; i <= 13; i++) {
+    for (let i = 1; i <= 14; i++) {
       this.desktopImages.push(require(`../../../images/Desktop_image_${i}.jpg`));
       this.mobileImages.push(require(`../../../images/Phone_image_${i}.jpg`));
     }
