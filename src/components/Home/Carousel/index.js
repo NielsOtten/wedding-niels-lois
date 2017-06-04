@@ -11,8 +11,8 @@ class Carousel extends React.Component {
     return(
       <section className={styles['background-image']}>
         <Parallax className={styles['parallax']}
-                  bgClassName={styles['parallax-2']}
-                  bgImage={require('../../../images/ReduitFortVechten.jpg')}
+                  bgClassName={[styles['parallax-2'], styles['fort']].join(' ')}
+                  bgImage={require('../../../images/LoisNielsLS-037.jpg')}
                   bgHeight="100%"
                   bgWidth="100%"
                   strength={75}/>
