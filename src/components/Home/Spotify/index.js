@@ -39,7 +39,7 @@ class Spotify extends React.Component {
       })
       .catch(error => {
         console.log(error);
-      })}, WAIT_INTERVAL);
+      })}, WAIT_INTERVAL, true);
   }
 
   searchAlbums(query) {
