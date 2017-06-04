@@ -76,13 +76,6 @@ class Song extends React.Component {
       })
   }
 
-  fetchTracks(albumId) {
-    return fetch('https://api.spotify.com/v1/albums/' + albumId)
-      .then(response => {
-        return response.json();
-      });
-  }
-
   render() {
     let style = {};
     if (this.state.playing) {

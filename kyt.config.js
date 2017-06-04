@@ -5,4 +5,8 @@
 module.exports = {
   reactHotLoader: true,
   debug: false,
+  modifyWebpackConfig: (baseConfig, options) => {
+    baseConfig.entry.main.push('whatwg-fetch');
+    return baseConfig;
+  }
 };
