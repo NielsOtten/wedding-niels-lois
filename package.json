@@ -15,11 +15,13 @@
     "kyt": "0.4.0",
     "lodash": "^4.17.4",
     "mongoose": "^4.9.4",
+    "node-fetch": "^1.7.1",
     "prop-types": "^15.5.8",
     "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
+    "spotify-web-api-node": "^2.4.0",
     "validator": "^7.0.0"
   },
   "scripts": {

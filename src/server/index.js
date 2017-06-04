@@ -3,6 +3,8 @@ import express from 'express';
 import compression from 'compression';
 import path from 'path';
 import React from 'react';
+import querystring from 'querystring';
+import SpotifyWebApi from 'spotify-web-api-node';
 import { renderToString } from 'react-dom/server';
 import RouterContext from 'react-router/lib/RouterContext';
 import createMemoryHistory from 'react-router/lib/createMemoryHistory';
@@ -13,6 +15,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import Guest from './Guest';
 import Song from './Song';
+
 
 const port = process.env.PORT || parseInt(KYT.SERVER_PORT, 10);
 
@@ -79,6 +82,35 @@ app.post('/addSong', (req, res) => {
     if (err)  return res.json({'success': false, err});
     return res.json({'success': true})
   });
+});
+
+app.get('/spotify/search', (req, res) => {
+  const spotifyWebApi =  new SpotifyWebApi({
+    clientId: '1a40c0ce7db3450989efa684a6f5325d',
+    clientSecret: '977cd360a45d47e4a9ce8f58be741298'
+  });
+
+  spotifyWebApi.clientCredentialsGrant()
+    .then(data => spotifyWebApi.setAccessToken(data.body['access_token']))
+    .then(() => spotifyWebApi.searchTracks(req.query.q))
+    .then((tracks) => {
+      res.json(tracks);
+    });
+
+  // fetch('https://accounts.spotify.com/api/token', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-type': 'x-www-form-urlencoded',
+  //     Authorization: 'Basic ' + new Buffer("1a40c0ce7db3450989efa684a6f5325d:977cd360a45d47e4a9ce8f58be741298").toString('base64'),
+  //   },
+  //   body: {
+  //     grant_type: 'client_credentials',
+  //   }
+  // })
+  // .then(response => console.log(response))
+  // .then(json => {
+  //   console.log(json);
+  // });
 });
 
 // Setup server side routing.

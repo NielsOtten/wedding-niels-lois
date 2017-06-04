@@ -103,7 +103,7 @@ class RSVP extends React.Component {
             })
           });
         } else {
-          alert('Aanmelden gelukt.');
+          alert('Afmelden gelukt.');
           this.setState({
             errors: []
           })
@@ -127,7 +127,7 @@ class RSVP extends React.Component {
             <div className={styles['guests']}>
               {this.state.inputs.map(input => (input))}
             </div>
-            <input className={styles['submit']} type="submit" value={this.state.loading ? 'Verzenden...' : 'Voeg toe'}/>
+            <input className={styles['submit']} type="submit" value={this.state.loading ? 'Verzenden...' : 'Meld af'}/>
           </form>
         </div>
       </section>

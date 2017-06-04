@@ -28,14 +28,12 @@ class Song extends React.Component {
       });
       this.audioObject.pause();
     } else {
-      this.fetchTracks(this.props.id)
-        .then(data => {
-          this.audioObject = new Audio(data.tracks.items[0].preview_url);
-          this.setState({
-            playing: true
-          });
-          this.audioObject.play();
-        });
+      if (this.props.preview === null) return alert('Geen preview gevonden.');
+      this.audioObject = new Audio(this.props.preview);
+      this.setState({
+        playing: true
+      });
+      this.audioObject.play();
     }
   }
 

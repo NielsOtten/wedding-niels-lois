@@ -29,13 +29,12 @@ class Spotify extends React.Component {
     this.timer = setTimeout(() => {this.searchAlbums(value)
       .then(response => {
         this.setState({
-          songs: response.albums.items.map(album => {
-            return <Song
-              key={album.id}
-              id={album.id}
-              title={album.name}
-              image={album.images[1].url}/>
-          })
+          songs: response.body.tracks.items.map(track => <Song
+            key={track.id}
+            id={track.id}
+            title={track.name}
+            image={track.album.images[1].url}
+            preview={track.preview_url}/>)
         });
       })
       .catch(error => {
@@ -45,10 +44,8 @@ class Spotify extends React.Component {
 
   searchAlbums(query) {
     if (query === '' || query === 'undefined') throw 'No search query';
-    return fetch('https://api.spotify.com/v1/search?q=' + query + '&type=album')
-      .then(response => {
-        return response.json();
-      });
+    return fetch('/spotify/search?q=' + query + '&type=album')
+      .then(response => response.json());
   }
 
   render() {
