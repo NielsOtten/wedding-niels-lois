@@ -17,6 +17,7 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
+    this.image = 2;
     setInterval(() => {
       this.setState({
         mobileImage: this.getCurrentImage(this.image, true),
