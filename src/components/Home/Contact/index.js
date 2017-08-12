@@ -14,7 +14,7 @@ class Contact extends React.Component {
         <div className={styles['contact']}>
           <h3>Elja Dokter - Brandsma</h3>
           <span>Tel: +31 6 34843996</span>
-          <span>Email: <a href="mailto:elja_brandsma@live.com">elja_brandsma@live.com</a></span>
+          <span>Email: <a href="mailto:elja_brandsma@live.nl">elja_brandsma@live.nl</a></span>
         </div>
         <div className={styles['contact']}>
           <h3>Femke van der Tuuk - Dokter</h3>
