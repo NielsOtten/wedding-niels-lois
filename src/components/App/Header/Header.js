@@ -76,8 +76,8 @@ class Header extends React.Component {
 
   initImages() {
     for (let i = 1; i <= 14; i++) {
-      this.desktopImages.push(require(`../../../images/Desktop_image_${i}.jpg`));
-      this.mobileImages.push(require(`../../../images/Phone_image_${i}.jpg`));
+      this.desktopImages.push(`/Desktop_image_${i}.jpg`);
+      this.mobileImages.push(`/Phone_image_${i}.jpg`);
     }
   }
 }

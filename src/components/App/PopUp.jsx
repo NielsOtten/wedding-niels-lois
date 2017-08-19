@@ -1,16 +1,21 @@
 import React from 'react';
 import styles from './styles.scss';
 
+let modal = null;
+
 function closePopUp(e) {
   if(e.target.id === 'modal') {
-    e.target.remove();
+    modal.remove();
   }
 }
 
 const PopUp = () => {
   return (
-    <div id='modal' className={styles.popUp} onClick={closePopUp}>
+    <div ref={(m) => modal = m} id='modal' className={styles.popUp} onClick={closePopUp}>
       <div className={styles.window}>
+        <span id='modal' className={styles.close} onClick={closePopUp}>
+          <img id='modal' src={require('../../images/cancel-music.svg')} alt='Sluiten' onClick={closePopUp}/>
+        </span>
         <iframe src='https://www.youtube.com/embed/Anyylln8RRQ' frameBorder='0' allowFullScreen autoPlay/>
         <h2>Aftermovie of our lovely day!</h2>
         <span className={styles.MadeBy}>Made by Mattheo van de Tuuk</span>
