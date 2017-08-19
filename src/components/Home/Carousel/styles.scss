@@ -16,7 +16,7 @@
   }
 
   .main-image {
-    background: url('../../../images/Desktop_image_1.jpg') center center / cover no-repeat;
+    background: url('/Desktop_image_1.jpg') center center / cover no-repeat;
     width: 50%;
     position: absolute;
     height: 125%;
@@ -37,7 +37,7 @@
   &:nth-child(2) {
     margin: 0 2% 0 1%;
   }
-  
+
   @media ($tablet) {
     width: 98%;
     float: none;
