@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import Menu from './Header/Menu/Menu';
 import Header from './Header/Header';
+import PopUp from './PopUp.jsx';
 import styles from './styles.scss';
 
 class App extends React.Component {
@@ -29,8 +29,8 @@ class App extends React.Component {
   render() {
     return (
       <div style={{height: 80+'vh'}}>
-        {/*<Menu transition={this.state.transition}/>*/}
         <div className={styles.content}>
+          <PopUp/>
           <Header transition={this.state.transition}/>
           {this.props.children}
         </div>

@@ -30,9 +30,9 @@ class Home extends React.Component {
           </div>
         </section>
         <Carousel/>
-        <RSVP/>
+        {/*<RSVP/>*/}
         <Plan/>
-        <Spotify/>
+        {/*<Spotify/>*/}
         <Contact/>
         <footer className={styles['container']}>
           Gemaakt door <strong><a href="https://www.linkedin.com/in/nkotten" target="_blank">Niels Otten</a></strong>
