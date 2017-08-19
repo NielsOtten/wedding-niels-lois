@@ -4,7 +4,7 @@ import styles from './styles.scss';
 let modal = null;
 
 function closePopUp(e) {
-  if(e.target.id === 'modal') {
+  if(e.target.id === 'modal' && modal !== null) {
     modal.remove();
   }
 }
@@ -19,7 +19,7 @@ const PopUp = () => {
         <iframe src='https://www.youtube.com/embed/Anyylln8RRQ' frameBorder='0' allowFullScreen autoPlay/>
         <h2>Aftermovie of our lovely day!</h2>
         <span className={styles.MadeBy}>Made by Mattheo van de Tuuk</span>
-        <p>Hartelijk dank voor al jullie liefde en gezelligheid! Wij hebben ontzettend genoten! Heb je foto's van onze speciale dag, graag willen wij deze van jullie ontvangen via een van de volgende kanalen:</p>
+        <p>Hartelijk dank voor al jullie liefde en gezelligheid! Wij hebben ontzettend genoten! Heb je foto's van onze speciale dag, graag willen wij deze van jullie ontvangen via een van de volgende kanalen (Iconen zijn klikbaar):</p>
         <div className={styles.share}>
           <a href='https://goo.gl/photos/HkzmF7vQy14TWpibA' target='_blank' title='Google photos' className={styles.platform}>
             <img src={require('../../images/google-plus.svg')} alt='Google icon'/>
